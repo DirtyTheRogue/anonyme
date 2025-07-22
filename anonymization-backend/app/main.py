@@ -37,7 +37,6 @@ from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from app.database import get_db  
 from app.models import User  
-from app.services.reidentification_test import run_test as execute_test
 from app.services.evaluator import evaluate
 from app.database import engine, Base
 from app.services.anonymizer import anonymize
