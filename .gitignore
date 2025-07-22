@@ -1,0 +1,9 @@
+.idea
+.DS_Store
+
+node_modules
+.venv
+
+results
+artefacts
+upload

@@ -1,0 +1,29 @@
+{
+  "extract": {
+    "id": "id",
+    "size": 1000,
+    "main_table": "data",
+    "secondary_table": [],
+    "importance_sampling": "False",
+    "group_cols": "date_naissance"
+  },
+
+  "anonymize": {
+    "tables" : ["data", "donnees"],
+    "feature" : [["Birth_rank", "Nir", "Date_naissance", "Nom", "Prenom"],
+                ["Birth_rank", "Nir", "Date_naissance", "Nom", "Prenom"]],
+    "cache": "True" 
+  },
+
+  "test": {
+    "og_tables": ["./data/data.csv", "./data/donnees.csv"],
+    "anon_tables": ["./results/anon_data/data_anon.parquet", "./results/anon_data/donnees_anon.parquet"],
+    "ids": ["id", "id"],
+    "count_cols": [["Nir", "Birth_rank"], ["Nir", "Birth_rank"]],
+    "group_cols": [["Nom", "Prenom", "Nir"], ["Nom", "Prenom", "Nir"]],
+    "group_var": ["Nom", "Nom"],
+    "target" : ["Birth_rank", "Birth_rank"],
+    "exp_features" : [["Date_naissance", "Nom"], ["Date_naissance", "Nom"]],
+    "viz": "True"
+  }
+}

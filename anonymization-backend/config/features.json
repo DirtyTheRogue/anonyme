@@ -1,0 +1,7 @@
+{
+  "PRENOM": ["Prenom", "individu_prenom", "Ben_prenom"],
+  "NOM": ["Nom"],
+  "DATE_NAISSANCE": ["Date_naissance"],
+  "NIR": ["Nir"],
+  "BIRTH_RANK": ["Birth_rank"]
+}
